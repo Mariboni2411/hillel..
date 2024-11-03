@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+function averageOfNumbers(arr) {
+    //числові елементи масиву
+    const numbers = arr.filter(item => typeof item === 'number');
+    //числових елементів немає, повертаємо 0, щоб уникнути ділення на 0
+    if (numbers.length === 0) return 0;
+    //сумa 
+    const sum = numbers.reduce((acc, num) => acc + num, 0);
+    //середнє арифметичне
+    return sum / numbers.length;
+}
+
+// Приклад 
+const array = [1, 'hello', 3, true, 5, null, 10];
+const result = averageOfNumbers(array);
+console.log(result);
+ // Виведе 4.75
